@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sanalouhos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Sanalouhos</h1>
+
+    <div class="solver">
+      <div class="gridHeader">
+        <button type="button" id="prevBtn" disabled>←</button>
+        <span id="solutionTitle">(Ei ratkaistu)</span>
+        <button type="button" id="nextBtn" disabled>→</button>
+      </div>
+
+      <div class="gridContainer">
+        <div class="svgContainer">
+          <svg
+            id="solutionSvg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 216 254"
+          >
+          </svg>
+        </div>
+        <div class="letterGridContainer">
+          <div class="lettergrid">
+            <input type="text" id="letter_0" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_1" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_2" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_3" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_4" class="letterInput" size=1 maxlength=1 />
+
+            <input type="text" id="letter_5" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_6" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_7" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_8" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_9" class="letterInput" size=1 maxlength=1 />
+
+            <input type="text" id="letter_10" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_11" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_12" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_13" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_14" class="letterInput" size=1 maxlength=1 />
+
+            <input type="text" id="letter_15" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_16" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_17" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_18" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_19" class="letterInput" size=1 maxlength=1 />
+
+            <input type="text" id="letter_20" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_21" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_22" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_23" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_24" class="letterInput" size=1 maxlength=1 />
+
+            <input type="text" id="letter_25" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_26" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_27" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_28" class="letterInput" size=1 maxlength=1 />
+            <input type="text" id="letter_29" class="letterInput" size=1 maxlength=1 />
+          </div>
+        </div>
+      </div>
+
+      <div class="gridFooter">
+        <button type="button" id="solveBtn" disabled>Ratkaise</button>
+      </div>
+
+      <div id="solutionListContainer">
+        <ul id="wordList"></ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+body {
+    background-color: white;
+}
+
+.letterGridContainer {
+    display:inline-block;
+}
+
+.solver {
+  display: inline-block;
+}
+
+.gridHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.gridFooter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.lettergrid {
+    display: grid;
+    grid-template-columns: repeat(5,  min-content);
+    grid-template-rows: repeat(6,  min-content);
+    gap: 10px;
+    background-color: #fff4;
+  }
+
+  .lettergrid input {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid black;
+    outline-color: black;
+  }
+
+  .lettergrid input.startPosition {
+    outline-color: blue;
+    border-color: blue;
+    background-color: #00F3;
+  }
+
+
+.gridContainer {
+  position: relative;
+  display: inline-block;  
+}
+
+.svgContainer {
+  position: absolute;
+  z-index: -1;
+}
+
+.svgContainer svg {
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
