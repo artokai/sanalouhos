@@ -85,8 +85,8 @@ const drawSolutionSvg = (solution: Word[]) => {
 
 const convertToSvgCoords = (x: number, y: number): [number, number] => {
     return [
-        (45 * x) + 18,
-        (43 * y) + 17,
+        (74 * x) + 32,
+        (74 * y) + 32,
     ];
 };
 
@@ -115,10 +115,11 @@ const drawWordSvg = (word: Word) => {
         }
 
         const square = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-        square.setAttribute('x', `${svgX - 11}`);
-        square.setAttribute('y', `${svgY - 11}`);
-        square.setAttribute('width', '22');
-        square.setAttribute('height', '22');
+        const squareSize = 40;
+        square.setAttribute('x', `${svgX - squareSize / 2}`);
+        square.setAttribute('y', `${svgY - squareSize / 2}`);
+        square.setAttribute('width', `${squareSize}`);
+        square.setAttribute('height', `${squareSize}`);
         square.setAttribute('fill', idx == 0 ? color : 'white');
         square.setAttribute('stroke', color);
         square.setAttribute('stroke-width', '2');
@@ -238,7 +239,6 @@ const handlePrevClick = () => {
     showSolution(currentSolutionIndex - 1);
 };
 
-
 const initializeLetters = (value: string) => {
     value = value.replace(/\s/g, '');
     for (let i=0; i<value.length; i++) {
@@ -248,7 +248,6 @@ const initializeLetters = (value: string) => {
     }
     appState = AppState.ReadyToSolve;
     (document.getElementById('solveBtn') as HTMLButtonElement).disabled = false;
-
 };
 
 const initialize = async () => {
@@ -269,7 +268,7 @@ const initialize = async () => {
     dispatch(Action.Initialized)
 
     // Populate default puzzle
-    // initializeLetters('LOMAL IAUAL TASUI KMRSE OADLK LPIEÄ');
+    //initializeLetters('LOMAL IAUAL TASUI KMRSE OADLK LPIEÄ');
 }
 
 initialize();
